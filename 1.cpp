@@ -148,7 +148,7 @@ double average_omp_mtx(const double *v, size_t n)
         unsigned int T = omp_get_num_threads();
         for (size_t i = t; i < n; i += T)
         {
-#pragma omp critial
+#pragma omp critical
             {
                 res += v[i];
             }
