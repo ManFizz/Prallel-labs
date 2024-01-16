@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "openmp-use-default-none"
 #include <memory>
 #include <cstdio>
 #include <cstdlib>
@@ -64,7 +66,7 @@ double average_reduce(const double *v, size_t n)
 {
     double res = 0.0;
 #pragma omp parallel for reduction(+ : res)
-    for (size_t i = 0; i < n; ++i)
+    for (int i = 0; i < n; ++i)
     {
         res += v[i];
     }
@@ -362,3 +364,5 @@ int main()
     }
     return 0;
 }
+
+#pragma clang diagnostic pop
