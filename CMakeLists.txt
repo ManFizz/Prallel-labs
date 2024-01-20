@@ -8,6 +8,8 @@ find_package(Threads REQUIRED)
 
 add_executable(PP_Lab_1 lib.cpp 1.cpp barrier.cpp)
 add_executable(PP_Lab_2 lib.cpp 2.cpp barrier.cpp)
+add_executable(PP_Lab_3 3.cpp)
 
 target_link_libraries(PP_Lab_1 PRIVATE Threads::Threads OpenMP::OpenMP_CXX)
 target_link_libraries(PP_Lab_2 PRIVATE Threads::Threads OpenMP::OpenMP_CXX)
+target_link_libraries(PP_Lab_3 PRIVATE Threads::Threads OpenMP::OpenMP_CXX)

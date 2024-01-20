@@ -350,7 +350,8 @@ int main()
         {"omp_mtx", average_omp_mtx_opt},
         {"cpp_mtx", average_cpp_mtx},
         {"cpp_mtx_local", average_mtx_local},
-        {"cpp_reduction", average_cpp_reduce}};
+        {"cpp_reduction", average_cpp_reduce}
+    };
 
     auto file = fopen("file1.csv", "w");
     fprintf(file, "method,number,result,speedup,efficiency\n");
